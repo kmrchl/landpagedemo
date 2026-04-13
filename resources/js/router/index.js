@@ -4,12 +4,12 @@ import CatalogPage from '../pages/CatalogPage.vue'
 
 const routes = [
   { path: '/', component: HomePage },
-  { path: '/catalog', component: CatalogPage },
+  { path: '/catalog', component: CatalogPage }
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes
 })
 
 export default router

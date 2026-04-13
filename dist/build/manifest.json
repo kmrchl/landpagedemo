@@ -1,0 +1,34 @@
+{
+  "_CatalogPage-BD6CIK4K.js": {
+    "file": "assets/CatalogPage-BD6CIK4K.js",
+    "name": "CatalogPage",
+    "css": [
+      "assets/CatalogPage-cpa0n8xW.css"
+    ]
+  },
+  "_CatalogPage-cpa0n8xW.css": {
+    "file": "assets/CatalogPage-cpa0n8xW.css",
+    "src": "_CatalogPage-cpa0n8xW.css"
+  },
+  "resources/js/catalog.js": {
+    "file": "assets/catalog-rqrJDz4c.js",
+    "name": "catalog",
+    "src": "resources/js/catalog.js",
+    "isEntry": true,
+    "imports": [
+      "_CatalogPage-BD6CIK4K.js"
+    ]
+  },
+  "resources/js/home.js": {
+    "file": "assets/home-B2Jtgc69.js",
+    "name": "home",
+    "src": "resources/js/home.js",
+    "isEntry": true,
+    "imports": [
+      "_CatalogPage-BD6CIK4K.js"
+    ],
+    "css": [
+      "assets/home-DiieBsaP.css"
+    ]
+  }
+}
