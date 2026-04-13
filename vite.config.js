@@ -12,5 +12,9 @@ export default defineConfig({
             refresh: true,
         }),
         vue(),
+        
     ],
+    build:{
+        outDir: 'dist'
+    }
 })

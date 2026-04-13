@@ -1,0 +1,37 @@
+{
+  "_Footer-DY2RIz_z.css": {
+    "file": "assets/Footer-DY2RIz_z.css",
+    "src": "_Footer-DY2RIz_z.css"
+  },
+  "_Footer-wR1uWwWi.js": {
+    "file": "assets/Footer-wR1uWwWi.js",
+    "name": "Footer",
+    "css": [
+      "assets/Footer-DY2RIz_z.css"
+    ]
+  },
+  "resources/js/catalog.js": {
+    "file": "assets/catalog-C3AlHRGS.js",
+    "name": "catalog",
+    "src": "resources/js/catalog.js",
+    "isEntry": true,
+    "imports": [
+      "_Footer-wR1uWwWi.js"
+    ],
+    "css": [
+      "assets/catalog-D4eU5vqF.css"
+    ]
+  },
+  "resources/js/home.js": {
+    "file": "assets/home-BQqBQX5i.js",
+    "name": "home",
+    "src": "resources/js/home.js",
+    "isEntry": true,
+    "imports": [
+      "_Footer-wR1uWwWi.js"
+    ],
+    "css": [
+      "assets/home-C27BaSSu.css"
+    ]
+  }
+}
