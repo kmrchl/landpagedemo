@@ -2,9 +2,10 @@
 <html>
 <head>
     <title>Karyakreasi</title>
-    @vite('resources/js/home.js')
+    @vite('resources/js/app.js')
 </head>
 <body>
     <div id="app"></div>
 </body>
 </html>
+

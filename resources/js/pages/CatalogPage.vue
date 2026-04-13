@@ -15,7 +15,7 @@
         <div v-if="!selectedCategory" class="category-grid">
             <div class="category-card" v-for="cat in categories" :key="cat.name" @click="selectCategory(cat.name)"
                 :style="{ backgroundImage: `url(${cat.image})` }" data-aos="zoom-in">
-                <div class="overlay">
+                <div class="grid-overlay">
                     <h3>{{ cat.name }}</h3>
                 </div>
             </div>
@@ -153,18 +153,22 @@ const filteredProducts = computed(() => {
 }
 
 /* overlay gelap */
-.overlay {
+.grid-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: 0.3s;
 }
 
+.grid-overlay:hover{
+    background: rgba(0, 0, 0, 0.5);
+}
+
 /* teks */
-.overlay h3 {
+.grid-overlay h3 {
     color: white;
     font-size: 20px;
     text-align: center;

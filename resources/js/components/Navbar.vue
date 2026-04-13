@@ -1,28 +1,21 @@
 <template>
     <nav class="nav">
-        <div class="menu-icon" @click="toggleMenu">
-            ☰
-        </div>
+        <div class="menu-icon" @click="toggleMenu">☰</div>
 
         <div class="dropdown" v-if="isOpen">
-            <a href="/">Home</a>
-            <a href="/catalog">Katalog</a>
+            <router-link to="/" @click="isOpen = false">Home</router-link>
+            <router-link to="/catalog" @click="isOpen = false">Katalog</router-link>
         </div>
     </nav>
-
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import { onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 
-onMounted(() => {
-    window.addEventListener('click', (e) => {
-        if (!e.target.closest('.nav')) {
-            isOpen.value = false
-        }
-    })
-})
+const router = useRouter()
+
+console.log(router.currentRoute.value)
 
 const isOpen = ref(false)
 
@@ -30,7 +23,13 @@ const toggleMenu = () => {
     isOpen.value = !isOpen.value
 }
 
-const closeMenu = () => {
+const goHome = () => {
+    router.push('/')
+    isOpen.value = false
+}
+
+const goCatalog = () => {
+    router.push('/catalog')
     isOpen.value = false
 }
 </script>
@@ -40,7 +39,8 @@ const closeMenu = () => {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1000;
+    z-index: 999999;
+    /* pointer-events: none; */
 }
 
 .menu-icon {
@@ -66,6 +66,9 @@ const closeMenu = () => {
     flex-direction: column;
     gap: 10px;
     animation: fadeIn 0.3s ease;
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 99999;
 }
 
 .dropdown a {
@@ -73,6 +76,7 @@ const closeMenu = () => {
     color: #333;
     padding: 8px;
     border-radius: 6px;
+    pointer-events: auto
 }
 
 .dropdown a:hover {

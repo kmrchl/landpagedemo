@@ -21,7 +21,7 @@
 
     <!-- LINK KE HALAMAN KATALOG FULL -->
     <div class="see-more">
-      <a href="/catalog">Lihat Katalog Lengkap →</a>
+      <router-link to="/catalog">Katalog</router-link>
     </div>
 
     <!-- STEP PEMESANAN -->
@@ -149,7 +149,6 @@ const steps = [
 </script>
 
 <style>
-
 .closing-section {
   margin-top: 80px;
   padding: 80px 20px;
